@@ -84,9 +84,8 @@ function changeView(hash) {
   clearPreviousView();
   if (hash) {
     addNewView(hash);
-    removeAllClasses('highlight');
-    document.querySelector('section[role=lists] a[href="#'+hash +'"]').classList.add('highlight');
     removeAllClasses('active');
+    document.querySelector('section[role=lists] a[href="#'+hash +'"]').classList.add('active');
     document.getElementById(hash).classList.add('active');
   }
 }
