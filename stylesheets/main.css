@@ -39,9 +39,13 @@ main section {
   padding: 10px;
 }
 
+main section:first-child {
+  width: 70%;
+}
 main section[role="lists"] {
   display: flex;
   flex-grow: 1;
+  width: 30%;
 }
 
 svg > * {
