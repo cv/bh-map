@@ -43,7 +43,7 @@ main section:first-child {
   width: 70%;
 }
 
-main section[role="lists"] {
+main section[role="navigation"] {
   display: flex;
   flex-grow: 1;
   width: 30%;
@@ -110,11 +110,11 @@ article > div {
   display: flex;
 }
 
-article section[role=specs] {
+article section[role=definition] {
   flex-grow: 2;
   min-width: 30%;
 }
-article section[role=description] {
+article section[role=note] {
   flex-grow: 3;
   min-width: 70%;
 }

@@ -49,8 +49,8 @@ function clearPreviousView() {
 function populateRoomDetailData(view, data) {
   var specs;
   view.querySelector('h1').innerHTML = data.name;
-  view.querySelector('section[role=description] p').innerHTML = data.description;
-  specs = view.querySelector('section[role=specs]');
+  view.querySelector('section[role=note] p').innerHTML = data.description;
+  specs = view.querySelector('section[role=definition]');
 
   data.specs.forEach(function (spec) {
     var li = document.createElement('li');
@@ -85,7 +85,7 @@ function changeView(hash) {
   if (hash) {
     addNewView(hash);
     removeAllClasses('active');
-    document.querySelector('section[role=lists] a[href="#'+hash +'"]').classList.add('active');
+    document.querySelector('section[role=navigation] a[href="#'+hash +'"]').classList.add('active');
     document.getElementById(hash).classList.add('active');
   }
 }
