@@ -47,8 +47,16 @@ function clearPreviousView() {
 }
 
 function populateRoomDetailData(view, data) {
+  var specs;
   view.querySelector('h1').innerHTML = data.name;
-  view.querySelector('section[role=description p').text = data.description;
+  view.querySelector('section[role=description] p').innerHTML = data.description;
+  specs = view.querySelector('section[role=specs]');
+
+  data.specs.forEach(function (spec) {
+    var li = document.createElement('li');
+    li.innerHTML = spec;
+    specs.querySelector('ul').appendChild(li);
+  });
 }
 
 function addNewView(hash) {
@@ -70,6 +78,10 @@ function changeView(hash) {
   clearPreviousView();
   if (hash) {
     addNewView(hash);
+    Array.prototype.forEach.call(document.querySelectorAll('.highlight'), function (element) {
+      element.classList.remove('highlight');
+    });
+    document.querySelector('section[role=lists] a[href="#'+hash +'"]').classList.add('highlight');
   }
 }
 
@@ -85,4 +97,5 @@ window.addEventListener('load', function () {
   populateList('rooms', bh.rooms);
   populateList('areas', bh.areas);
   listenToHashChange();
+  changeView(window.location.hash.slice(1));
 });
