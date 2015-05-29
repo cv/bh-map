@@ -39,9 +39,14 @@ main section {
   padding: 10px;
 }
 
+main section:first-child {
+  width: 70%;
+}
+
 main section[role="lists"] {
   display: flex;
   flex-grow: 1;
+  width: 30%;
 }
 
 svg > * {
@@ -100,4 +105,38 @@ a, a:hover, a:visited, a:active {
 
 a:hover {
   background-color: rgb(255, 244, 80);
+}
+
+article > div {
+  display: flex;
+}
+
+article section[role=specs] {
+  flex-grow: 2;
+  min-width: 30%;
+}
+article section[role=description] {
+  flex-grow: 3;
+  min-width: 70%;
+}
+
+article section {
+  padding: 0 0 1.5em;
+}
+
+article section h1,
+article section h2 {
+  padding: 0 0 1em;
+}
+
+article section p {
+  line-height: 1.5em;
+}
+
+article section ul {
+  list-style: disc;
+  padding-left: 18px;
+}
+article section li {
+  padding: 5px 0;
 }
