@@ -1,0 +1,103 @@
+body {
+  font-family: 'Open Sans', 'arial';
+  font-size: 14px;
+  color: #333;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+header img {
+  height: 48px;
+  display: inline;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  line-height: 48px;
+  height: 48px;
+  vertical-align: top;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+main {
+  display: flex;
+  box-sizing: border-box;
+}
+
+main section {
+  align-self: flex-start;
+  flex-grow: 3;
+  padding: 10px;
+}
+
+main section[role="lists"] {
+  display: flex;
+  flex-grow: 1;
+}
+
+svg > * {
+  fill: #ccc;
+  cursor: pointer;
+}
+
+svg > *.highlight {
+  fill: rgba(200, 200, 200, 0.6);
+}
+
+svg > .rooms {
+  fill: rgb(181, 185, 53);
+}
+
+svg > .rooms.highlight {
+  fill: rgba(181, 185, 53, 0.6);
+}
+
+svg > #wc,
+svg > #wc-ffa {
+  fill: rgb(38, 189, 207);
+}
+
+svg > #wc.highlight,
+svg > #wc-ffa.highlight {
+  fill: rgba(38, 189, 207, 0.6);
+}
+
+svg > #lounge {
+  fill: rgb(177, 28, 84);
+}
+
+svg > #lounge.highlight {
+  fill: rgba(177, 28, 84, 0.6);
+}
+
+h2 {
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+ul li a {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+ul li a.highlight {
+  background-color: rgb(255, 244, 80);
+  border-radius: 1px;
+}
+
+a, a:hover, a:visited, a:active {
+  color: #333;
+}
+
+a:hover {
+  background-color: rgb(255, 244, 80);
+}
