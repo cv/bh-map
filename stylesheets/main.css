@@ -24,6 +24,10 @@ h1 {
   vertical-align: top;
 }
 
+h1, h2 {
+  text-transform: uppercase;
+}
+
 main {
   display: flex;
   box-sizing: border-box;
