@@ -54,7 +54,8 @@ svg > * {
   cursor: pointer;
 }
 
-svg > *.highlight {
+svg > *.highlight,
+svg > *.active {
   fill: rgba(200, 200, 200, 0.6);
 }
 
@@ -62,7 +63,8 @@ svg > .rooms {
   fill: rgb(181, 185, 53);
 }
 
-svg > .rooms.highlight {
+svg > .rooms.highlight,
+svg > .rooms.active {
   fill: rgba(181, 185, 53, 0.6);
 }
 
@@ -72,7 +74,9 @@ svg > #wc-ffa {
 }
 
 svg > #wc.highlight,
-svg > #wc-ffa.highlight {
+svg > #wc.active,
+svg > #wc-ffa.highlight,
+svg > #wc-ffa.active {
   fill: rgba(38, 189, 207, 0.6);
 }
 
@@ -80,7 +84,8 @@ svg > #lounge {
   fill: rgb(177, 28, 84);
 }
 
-svg > #lounge.highlight {
+svg > #lounge.highlight,
+svg > #lounge.active {
   fill: rgba(177, 28, 84, 0.6);
 }
 

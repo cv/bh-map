@@ -74,14 +74,20 @@ function addNewView(hash) {
   }
 }
 
+function removeAllClasses(className) {
+  Array.prototype.forEach.call(document.querySelectorAll('.' + className), function (element) {
+    element.classList.remove(className);
+  });
+}
+
 function changeView(hash) {
   clearPreviousView();
   if (hash) {
     addNewView(hash);
-    Array.prototype.forEach.call(document.querySelectorAll('.highlight'), function (element) {
-      element.classList.remove('highlight');
-    });
+    removeAllClasses('highlight');
     document.querySelector('section[role=lists] a[href="#'+hash +'"]').classList.add('highlight');
+    removeAllClasses('active');
+    document.getElementById(hash).classList.add('active');
   }
 }
 
